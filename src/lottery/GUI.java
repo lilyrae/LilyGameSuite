@@ -365,7 +365,8 @@ public class GUI {
 						
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
-						e1.printStackTrace();	
+						JOptionPane.showMessageDialog(null, "Error: File is not readable. Please choose another file.");
+						
 						br.close();
 					}	
 				
