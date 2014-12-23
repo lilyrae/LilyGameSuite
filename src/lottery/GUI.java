@@ -1182,10 +1182,10 @@ public class GUI {
 					{buttonTic10,buttonTic11,buttonTic12},
 					{buttonTic20,buttonTic21,buttonTic22},};
 			
-			int[] randomLevel= Utilities.generateRandomNumb(1,95);
+			int randomLevel= Utilities.generateRandomNumb(1,95)[0];
 			
 			//is player level high enough to go for good choices
-			if(level > randomLevel[0]){
+			if(level > randomLevel){
 				
 				choices=Utilities.findEmptyCorners(gridTic);
 				
@@ -1201,7 +1201,7 @@ public class GUI {
 			}
 			
 			try {
-				Thread.sleep(10*randomLevel[0]);
+				Thread.sleep(10*randomLevel);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
