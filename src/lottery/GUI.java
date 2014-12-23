@@ -355,6 +355,10 @@ public class GUI {
 						p1.setScore(score1);
 						p2.setScore(score2);
 						
+						String AI = br.readLine();
+						String[] AIarr = AI.split(":");
+						AIplay =Boolean.valueOf(AIarr[1]);
+						
 						br.close(); 
 						
 						return true;
