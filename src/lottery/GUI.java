@@ -239,7 +239,6 @@ public class GUI {
         saveAction.setEnabled(false);
         loadAction.setEnabled(false);
         UndoAction.setEnabled(false);
-        FAQAction.setEnabled(false);
         rulesAction.setEnabled(false);
         
         saveAction.addActionListener(new ActionListener() {
@@ -300,6 +299,14 @@ public class GUI {
         exitAction.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	System.exit(0);
+            }
+        });
+        
+        FAQAction.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	JOptionPane.showMessageDialog(frameMain, "<html>1) How do I get this amazing game?<br>"
+            			+ "Ask Lily to send it to you.<br>2) Who can I contact for customer support?<br>Alberto<br>"
+            			+ "3) Is this game available in different languages?<br>In 2099, it will be released in French.</html>");
             }
         });
         
