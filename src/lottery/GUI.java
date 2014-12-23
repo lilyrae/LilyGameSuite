@@ -239,7 +239,6 @@ public class GUI {
         saveAction.setEnabled(false);
         loadAction.setEnabled(false);
         UndoAction.setEnabled(false);
-        rulesAction.setEnabled(false);
         
         saveAction.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -307,6 +306,16 @@ public class GUI {
             	JOptionPane.showMessageDialog(frameMain, "<html>1) How do I get this amazing game?<br>"
             			+ "Ask Lily to send it to you.<br>2) Who can I contact for customer support?<br>Alberto<br>"
             			+ "3) Is this game available in different languages?<br>In 2099, it will be released in French.</html>");
+            }
+        });
+        
+        rulesAction.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	JOptionPane.showMessageDialog(frameMain, "<html>The Lottery Rules:<br>1) Enter 5 numbers in the draw.<br>"
+            			+ "2) Click play!<br>3) See if your numbers came up in the lotto draw.<br><br>Tic Tac Toe Rules:<br>"
+            			+ "Aim- Put three of your marks (X or O) in a row before your opponent!<br>1) Players choose X or O"
+            			+ "<br>2) First player starts by clicking grid<br>3) Players alternate putting their signs on the board<br>"
+            			+ "4) Game ends when 3 signs are in a row (diagonal, vertical or horizontal)</html>");
             }
         });
         
