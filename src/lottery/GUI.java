@@ -253,7 +253,7 @@ public class GUI {
             	
 	            	String filename = fileChooser.getSelectedFile().getAbsolutePath();
 	            	
-	            	if(filename.length()<5 || !filename.substring(filename.length()-4, filename.length()).equals(".lgs")){
+	           	if(filename.length()<5 || !filename.substring(filename.length()-4, filename.length()).equals(".lgs")){
 	            		filename += ".lgs";
 	            	}
 	            	
@@ -354,13 +354,18 @@ public class GUI {
 						p1.setScore(score1);
 						p2.setScore(score2);
 						
+						br.close(); 
+						
 						return true;
 						
-					} catch (IOException e1) {
+					} catch (Exception e1) {
 						// TODO Auto-generated catch block
-						e1.printStackTrace();		
-					}
-			} catch (FileNotFoundException e2) {
+						e1.printStackTrace();	
+						br.close();
+					}	
+				
+				
+			} catch (Exception e2) {
 				// TODO Auto-generated catch block
 				e2.printStackTrace();	
 			}
