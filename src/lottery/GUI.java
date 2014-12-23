@@ -265,6 +265,7 @@ public class GUI {
 		            	writer.println("game: Tic Tac Toe");
 		            	writer.println("players:" + p1.getName() + "," + p2.getName());
 		            	writer.println("scores:" + p1.getScore() + "," + p2.getScore());
+		            	writer.println("AI?:" + AIplay);
 		            	writer.close();
 		            	
 					} catch (FileNotFoundException e1) {
