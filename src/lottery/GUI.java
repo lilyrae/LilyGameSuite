@@ -1220,7 +1220,7 @@ public class GUI {
 	
 	public static void playTicAI(){
 		
-		ArrayList<Integer> choices;
+		ArrayList<Integer> choices = null;
 		
 		countbutton++;
 		
@@ -1236,41 +1236,34 @@ public class GUI {
 			
 			position = Utilities.defenseStrategy(3,gridTic);
 			
-			int[] randomLevel= Utilities.generateRandomNumb(1,100);
+			int randomLevel= Utilities.generateRandomNumb(1,100)[0];
 			
 			//array list
 			if(position[0] == -1){
 				
-				int[] randomLevel2= Utilities.generateRandomNumb(1,85);
-				
-				if(level > randomLevel[0] && countbutton<5){
-					
-					choices=Utilities.findEmptyCorners(gridTic);
-						
-					position= chooseGridPosition(choices);
-				
-				}
+				int randomLevel2= Utilities.generateRandomNumb(1,85)[0];
 			
-				else if(level > randomLevel2[0]){
-					
-					choices =Utilities.basicStrategy(3,gridTic);
-					
-					position= chooseGridPosition(choices);
-					
-				}
 				
-				else{
-						
+				if(level > randomLevel && countbutton<5)
+					choices=Utilities.findEmptyCorners(gridTic);
+	
+				else if(level > randomLevel2)
+					choices =Utilities.basicStrategy(3,gridTic);	
+				
+				if(choices == null || choices.isEmpty()){
+		
 					choices= Utilities.findEmptySpaces(3, gridTic);
-					
 					position= chooseGridPosition(choices);
 					
 					}
-				}
+				else
+					position= chooseGridPosition(choices);
+			}
+			
 				
 				
 			try {
-				Thread.sleep(10*randomLevel[0]);
+				Thread.sleep(10*randomLevel);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
