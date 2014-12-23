@@ -238,7 +238,6 @@ public class GUI {
         
         saveAction.setEnabled(false);
         loadAction.setEnabled(false);
-        UndoAction.setEnabled(false);
         
         saveAction.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -316,6 +315,12 @@ public class GUI {
             			+ "Aim- Put three of your marks (X or O) in a row before your opponent!<br>1) Players choose X or O"
             			+ "<br>2) First player starts by clicking grid<br>3) Players alternate putting their signs on the board<br>"
             			+ "4) Game ends when 3 signs are in a row (diagonal, vertical or horizontal)</html>");
+            }
+        });
+        
+        UndoAction.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	JOptionPane.showMessageDialog(frameMain, "LOL! There is no undo option in this game.");
             }
         });
         
