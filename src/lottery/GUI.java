@@ -668,6 +668,7 @@ public class GUI {
 	    buttonPlayTic.addActionListener(new ActionListener() {
 	          public void actionPerformed(ActionEvent e){
 	        	  //enter new GUI to start playing game
+	        	  AIplay=false;
 	        	  showInputPlayer();
 	        	  decidePlayerStart();
 	        	  panelIntroTic.setVisible(false);
@@ -1309,6 +1310,8 @@ public class GUI {
 	}
 	
 	public static void resetTicTac(){
+		
+
 		
 		//reset count of times buttons are clicked
 		countbutton=0;
