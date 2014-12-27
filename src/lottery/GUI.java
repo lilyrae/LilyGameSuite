@@ -107,7 +107,7 @@ public class GUI {
 	static JButton buttonTic02;
 	static JButton buttonTic12;
 	static JButton buttonTic22;
-	static JComboBox <Object> menuLevels;
+	static JComboBox menuLevels;
 	    
 	//lottery game variables
 	static String input;
