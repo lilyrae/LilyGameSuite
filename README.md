@@ -1,1 +1,1 @@
-This is my first project. 
+A game suite in Java including noughts and crosses and a lottery game.
